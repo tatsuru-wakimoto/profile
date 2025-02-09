@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ソフトウェアエンジニア プロフィール</title>
+  <style>
+    /* リセット */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: #fff;
+      color: #111;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    /* ヘッダー */
+    header {
+      background-color: #111;
+      color: #fff;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    header .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .logo h1 {
+      font-size: 1.5rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    nav li {
+      margin-left: 1.5rem;
+    }
+    nav a {
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ccc;
+    }
+    
+    /* メインコンテンツ */
+    main {
+      max-width: 1200px;
+      margin: 100px auto 0 auto;
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 4rem;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #111;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
+    section p {
+      margin-bottom: 1rem;
+    }
+    
+    /* スキル・プロジェクト */
+    .skills, .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .skill, .project {
+      background-color: #f0f0f0;
+      border: 1px solid #ddd;
+      padding: 1rem;
+      flex: 1 1 calc(33.333% - 1rem);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .skill:hover, .project:hover {
+      transform: translateY(-5px);
+    }
+    
+    /* フッター */
+    footer {
+      background-color: #111;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+    
+    /* レスポンシブ調整 */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+      nav li {
+        margin: 0.5rem 0;
+      }
+      .skill, .project {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>My Profile</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">ホーム</a></li>
+          <li><a href="#about">自己紹介</a></li>
+          <li><a href="#skills">スキル</a></li>
+          <li><a href="#projects">プロジェクト</a></li>
+          <li><a href="#contact">連絡先</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- メインコンテンツ -->
+  <main>
+    <!-- ホームセクション -->
+    <section id="home">
+      <h2>Welcome</h2>
+      <p>こんにちは。ソフトウェアエンジニアの[あなたの名前]です。シンプルで洗練されたデザインと高い技術力を活かして、魅力的なソリューションを提供します。</p>
+    </section>
+    
+    <!-- 自己紹介セクション -->
+    <section id="about">
+      <h2>自己紹介</h2>
+      <p>最新技術への探求心と実績を武器に、常により良いシステム開発を目指しています。コードの美しさと効率性を両立することをモットーとし、日々の学習と挑戦を続けています。</p>
+    </section>
+    
+    <!-- スキルセクション -->
+    <section id="skills">
+      <h2>スキル</h2>
+      <div class="skills">
+        <div class="skill">JavaScript</div>
+        <div class="skill">HTML5 / CSS3</div>
+        <div class="skill">React</div>
+        <div class="skill">Node.js</div>
+        <div class="skill">Python</div>
+        <div class="skill">Git</div>
+      </div>
+    </section>
+    
+    <!-- プロジェクトセクション -->
+    <section id="projects">
+      <h2>プロジェクト</h2>
+      <div class="projects">
+        <div class="project">
+          <h3>Project One</h3>
+          <p>最新のWeb技術を駆使したシンプルなUI構築プロジェクト。</p>
+        </div>
+        <div class="project">
+          <h3>Project Two</h3>
+          <p>バックエンドとフロントエンドの統合に注力したシステム。</p>
+        </div>
+        <div class="project">
+          <h3>Project Three</h3>
+          <p>パフォーマンスとスケーラビリティを両立した開発事例。</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- 連絡先セクション -->
+    <section id="contact">
+      <h2>連絡先</h2>
+      <p>Email: example@example.com</p>
+      <p>GitHub: <a href="https://github.com/username" target="_blank">github.com/username</a></p>
+    </section>
+  </main>
+  
+  <!-- フッター -->
+  <footer>
+    <p>&copy; 2025 [あなたの名前]. All Rights Reserved.</p>
+  </footer>
+  
+  <!-- JavaScript：ナビゲーションリンクのスムーススクロール -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          window.scrollTo({
+            top: targetSection.offsetTop - 80, // ヘッダー分のオフセット調整
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
